@@ -1,0 +1,494 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  /* Фон с космосом и звезды */
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    z-index: -1;
+    animation: moveStars 150s linear infinite; 
+  }
+  
+  @keyframes moveStars {
+    0% { background-position: 0 0; }
+    100% { background-position: 10000px 10000px; }
+  }
+  
+  .stars {
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    filter: brightness(1.5); 
+  }
+  
+  /* Шапка */
+  header {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  header .btn {
+    background: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  header .btn:hover {
+    background: #fff;
+    color: #4f7289;
+    border-color: #4f7289;
+  }
+
+/* Стиль для космонавта */
+header .cosmonaut {
+    position: absolute;
+    bottom: 0;
+    left: -200px; 
+    width: 100px;
+    animation: moveCosmonaut 13s linear infinite; 
+    animation-delay: 1s; 
+  }
+  
+  /* Стиль для монстра */
+  header .monster {
+    position: absolute;
+    bottom: 0;
+    left: -200px;
+    width: 120px;   
+    animation: moveMonster 13s linear infinite; 
+    animation-delay: 2.2s; 
+  }
+  
+  /* Анимация космонавта по более широкой траектории */
+  @keyframes moveCosmonaut {
+    0% {
+      left: -200px;
+      transform: translateY(0);
+    }
+    20% {
+      left: 20%;
+      transform: translateY(-80px); 
+    }
+    40% {
+      left: 40%;
+      transform: translateY(0); 
+    }
+    60% {
+      left: 60%;
+      transform: translateY(80px); 
+    }
+    80% {
+      left: 80%;
+      transform: translateY(0); 
+    }
+    100% {
+      left: 100%;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Анимация монстра, следуя за космонавтом с аналогичной траекторией */
+  @keyframes moveMonster {
+    0% {
+      left: -200px;
+      transform: translateY(0);
+    }
+    20% {
+      left: 20%;
+      transform: translateY(-80px); 
+    }
+    40% {
+      left: 40%;
+      transform: translateY(0); 
+    }
+    60% {
+      left: 60%;
+      transform: translateY(80px); 
+    }
+    80% {
+      left: 80%;
+      transform: translateY(0); 
+    }
+    100% {
+      left: 100%;
+      transform: translateY(0);
+    }
+  }
+  
+/* Блок О себе */
+#about {
+    padding: 0px 60px;
+    background: rgba(0, 0, 0, 0.8); 
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-top: 100px; 
+  }
+  
+  #about .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  #about p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 60px 100px;
+  }
+  /* Планеты с анимацией */
+  .planets-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .planet {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.3; 
+    animation: movePlanet 30s linear infinite;
+  }
+  
+  .planet-1 {
+    width: 100px;
+    height: 100px;
+    left: 15%;
+    top: 10%;
+    animation-duration: 20s;
+  }
+  
+  .planet-2 {
+    width: 150px;
+    height: 150px;
+    left: 60%;
+    top: 25%;
+    animation-duration: 25s;
+  }
+  
+  .planet-3 {
+    width: 80px;
+    height: 80px;
+    left: 40%;
+    top: 60%;
+    animation-duration: 18s;
+  }
+  
+  .planet-4 {
+    width: 120px;
+    height: 120px;
+    left: 80%;
+    top: 70%;
+    animation-duration: 28s;
+  }
+  
+  @keyframes movePlanet {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(200px, 100px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+ /* Блок Мои ключевые навыки */
+#skills {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    position: relative;
+    text-align: center; 
+  }
+  
+  #skills h3 {
+    font-size: 2.2rem;  
+    margin-bottom: 40px;
+  }
+  
+  .skills-container {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 0px;  
+    max-width: 80%; 
+    margin: 0 auto; 
+  }
+  
+  .skill-card {
+    position: relative;
+    width: 240px; 
+    height: 240px;
+    background-color: #333;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .skill-card:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 220px; 
+    height: 220px;
+    border: 3px dashed #fff;
+    border-radius: 50%;
+    animation: rotateCircle 10s linear infinite;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes rotateCircle {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+/* Портфолио */
+#portfolio h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: #3498db00;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto 40px; 
+  text-align: center; 
+  width: fit-content; 
+}
+
+/* Стили для контейнера проектов */
+.projects {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  gap: 80px 20px; 
+  padding: 0 80px;
+}
+
+/* Стили для карточек проектов */
+.project-card {
+  background: #48464684;
+  border-radius: 15px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  width: calc(45% - 20px); 
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+}
+
+.project-card h3 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: center; 
+}
+
+/* Для экранов меньшего размера */
+@media (max-width: 768px) {
+  .project-card {
+    width: calc(100% - 20px); 
+  }
+}
+
+.project-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  width: 100%; 
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+/* Убираем подчеркивание с ссылки */
+.project-card a {
+  text-decoration: none; 
+  color: inherit; 
+  display: inline-block; 
+}
+
+/* Стили для кнопки */
+.circle-button {
+  background-color: #000000a1; 
+  color: white;
+  padding: 20px 40px; 
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none; 
+}
+
+.circle-button span {
+  display: block;
+}
+/* Эффекты для кнопки */
+.project-card a:hover .circle-button {
+  background-color: #787578c9; 
+  transform: scale(1.1); 
+}
+  
+ /* Контакты */
+#contact {
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: #3498db00;
+  padding: 100px;
+  border-radius: 10px;
+  margin: 0 auto 40px; 
+  text-align: center; 
+  width: fit-content; 
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Ссылки социальных сетей */
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.social-links a {
+  text-decoration: none; 
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #555; 
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Иконки социальных сетей */
+.social-links a i {
+  margin-right: 8px; 
+  font-size: 1.8rem; 
+}
+
+/* Эффект при наведении */
+.social-links a:hover {
+  background-color: #2980b9; 
+  transform: scale(1.05); 
+}
+
+/* Специфичные стили для каждой соцсети */
+.social-links a.telegram {
+  background-color: #0088cc; 
+}
+
+.social-links a.linkedin {
+  background-color: #0077b5; 
+}
+
+.social-links a.whatsapp {
+  background-color: #25d366; 
+}
+
+.social-links a.discord {
+  background-color: #7289da; 
+}
+
+/* Дополнительные стили для кнопок при наведении */
+.social-links a.telegram:hover {
+  background-color: #007bb5;
+}
+
+.social-links a.linkedin:hover {
+  background-color: #006097;
+}
+
+.social-links a.whatsapp:hover {
+  background-color: #128c7e;
+}
+
+.social-links a.discord:hover {
+  background-color: #5b6e9e;
+}
+  
+  /* Подвал */
+  footer {
+    background-color: #3498db00;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto 40px; 
+    text-align: center; 
+    width: fit-content; 
+  }
+  
+  
