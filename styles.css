@@ -42,12 +42,12 @@ body {
   }
   
   header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 10px;
   }
   
   header p {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-bottom: 40px;
   }
   
@@ -254,7 +254,7 @@ header .cosmonaut {
     display: flex; 
     justify-content: space-between; 
     gap: 0px;  
-    max-width: 80%; 
+    max-width: 100%; 
     margin: 0 auto; 
   }
   
@@ -403,7 +403,7 @@ header .cosmonaut {
   font-size: 2.5rem;
   color: #fff;
   background-color: #3498db00;
-  padding: 100px;
+  padding: 20px;
   border-radius: 10px;
   margin: 0 auto 40px; 
   text-align: center; 
@@ -484,7 +484,7 @@ header .cosmonaut {
   /* Подвал */
   footer {
     background-color: #3498db00;
-    padding: 20px;
+    padding: 0px;
     border-radius: 10px;
     margin: 0 auto 40px; 
     text-align: center; 
